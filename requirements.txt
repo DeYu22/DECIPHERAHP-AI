@@ -1,5 +1,7 @@
-streamlit
-plotly
-pandas
-numpy
-matplotlib
+scikit-learn>=1.0.0
+streamlit>=1.0.0
+numpy>=1.20.0
+matplotlib>=3.0.0
+pandas>=1.0.0
+fpdf>=1.7.0
+streamlit-lottie>=0.0.3
