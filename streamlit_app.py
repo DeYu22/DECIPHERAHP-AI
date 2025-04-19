@@ -1,18 +1,23 @@
 # -*- coding: utf-8 -*-
-import numpy as np
-import matplotlib.pyplot as plt
-import streamlit as st
-from sklearn.linear_model import LinearRegression
-from streamlit_lottie import st_lottie
-import json
-import requests
-import time
-import pandas as pd
-from fpdf import FPDF
-import base64
-from datetime import datetime
-import tempfile
-import os
+try:
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import streamlit as st
+    from sklearn.linear_model import LinearRegression  # Pastikan scikit-learn terinstal
+    from streamlit_lottie import st_lottie
+    import json
+    import requests
+    import time
+    import pandas as pd
+    from fpdf import FPDF
+    import base64
+    from datetime import datetime
+    import tempfile
+    import os
+except ImportError as e:
+    st.error(f"Error mengimpor modul yang diperlukan: {str(e)}")
+    st.error("Pastikan semua dependencies terinstal dengan menjalankan: pip install -r requirements.txt")
+    st.stop()
 
 # Konfigurasi halaman
 st.set_page_config(
@@ -21,6 +26,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# ... (sisa kode tetap sama, mulai dari fungsi create_pdf() hingga akhir file)
 
 # Fungsi untuk membuat PDF
 def create_pdf(results, nama_produk, biaya_produksi, biaya_pemasaran, margin_wish, 
