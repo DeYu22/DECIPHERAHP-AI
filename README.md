@@ -50,7 +50,7 @@
    ```
 3. Jalankan aplikasi:
    ```
-   streamlit run app.py
+   streamlit run streamlit_app.py
    ```
 
 ## Kontribusi
